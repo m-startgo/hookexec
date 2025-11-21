@@ -1,0 +1,19 @@
+# Wails3
+bin
+
+# common ignores
+logs
+*.log
+.cache
+.DS_Store
+dist
+node_modules
+
+
+
+# lockfile
+package-lock.json
+go.sum
+
+# cache files
+.eslintcache
