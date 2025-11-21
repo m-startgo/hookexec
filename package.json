@@ -12,7 +12,7 @@
   },
   "scripts": {
     "app-dev": "go run main.go",
-    "app-build": "",
+    "app-build": "go build -o bin/.",
     "re-update": "del-cli ./node_modules ./package-lock.json && npm update && ts-node script/re_install.ts",
     "git-sync": "ts-node script/git_sync.ts",
     "clear-dir": "ts-node script/clear_dir.ts",
