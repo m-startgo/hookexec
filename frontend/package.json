@@ -1,0 +1,14 @@
+{
+  "name": "hookexec-frontend",
+  "version": "1.0.0",
+  "description": "Hookexec 前端项目",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo '开发模式启动脚本将在这里配置'",
+    "build": "echo '构建脚本将在这里配置'",
+    "test": "echo '测试脚本将在这里配置'"
+  },
+  "keywords": ["hookexec", "frontend", "go"],
+  "author": "",
+  "license": "ISC"
+}

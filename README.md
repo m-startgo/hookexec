@@ -28,3 +28,5 @@ var FrontendDist embed.FS
 
 http://localhost:9900/ -> 返回 frontend/dist 目录下的 index.html 文件
 http://localhost:9900/api/data -> 返回一些 json 数据
+
+整个服务以 gin 为 web 框架。
