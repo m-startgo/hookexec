@@ -1,8 +1,8 @@
 {
-  "name": "lone-star-engineer",
+  "name": "hookexec",
   "private": true,
   "version": "0.1.2",
-  "description": "《孤星工程师》",
+  "description": "hookexec",
   "author": "墨七",
   "type": "module",
   "engine-strict": true,
@@ -11,8 +11,8 @@
     "npm": ">=11"
   },
   "scripts": {
-    "app-dev": "go run main.go",
-    "app-build": "go build -o bin/.",
+    "app-dev": "ts-node script/app_dev.ts",
+    "app-build": "ts-node script/app_build.ts",
     "re-update": "del-cli ./node_modules ./package-lock.json && npm update && ts-node script/re_install.ts",
     "git-sync": "ts-node script/git_sync.ts",
     "clear-dir": "ts-node script/clear_dir.ts",
