@@ -2,7 +2,10 @@ module app.local
 
 go 1.25
 
-require github.com/gin-gonic/gin v1.11.0
+require (
+	github.com/gin-gonic/gin v1.11.0
+	github.com/m-startgo/go-utils v0.4.6
+)
 
 require (
 	github.com/bytedance/gopkg v0.1.3 // indirect
