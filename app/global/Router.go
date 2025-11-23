@@ -17,6 +17,8 @@ func SetApiRoutes() {
 	{
 		api.GET("/data", routes.GetData)
 		api.POST("/data", routes.GetData)
+		// GitHub webhook 路由
+		api.POST("/webhook/github", routes.GitHubWebhookHandler)
 	}
 }
 
