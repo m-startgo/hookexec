@@ -27,6 +27,9 @@
           <li @click="quit">退出应用</li>
         </ul>
       </div>
+
+      <button @click="GetData">发起 Get 请求</button>
+      <button @click="PostData">发起 Post 请求</button>
     </SimpleBar>
   </div>
 </template>
@@ -36,6 +39,7 @@ import CounterOptions from '@src/stores/CounterOptions.vue';
 import { useCounterOptionsStore } from '@src/stores/counterOptions';
 import { mapState } from 'pinia';
 import SimpleBar from 'simplebar-vue';
+import { GetData, PostData } from '@src/api/data';
 
 export default {
   name: 'TestPage',
@@ -92,6 +96,22 @@ export default {
     hideMenu() {
       this.menuInfo.visible = false;
     },
+    GetData() {
+      GetData({
+        test: 'test',
+      }).then((res) => {
+        console.info('GetData 返回结果：', res);
+      });
+    },
+    PostData() {
+      PostData({
+        test: 'test',
+        name: '测试名称',
+        age: 18,
+      }).then((res) => {
+        console.info('PostData 返回结果：', res);
+      });
+    },
   },
 };
 </script>
@@ -104,6 +124,9 @@ export default {
   box-sizing: border-box;
   height: 100%;
   background-color: rgba($color: #fff, $alpha: 0.8);
+
+  width: 100vw;
+  height: 100vh;
 
   .SimpleBar {
     padding: 15px;

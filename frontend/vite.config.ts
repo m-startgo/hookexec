@@ -26,5 +26,16 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 9989,
+    proxy: {
+      // 将所有以 /api 开头的请求转发到后端服务
+      '/api': {
+        target: 'http://localhost:9900/',
+        changeOrigin: true,
+        secure: false,
+        ws: true,
+        // 如果后端不需要 /api 前缀，可以取消注释下面的 rewrite
+        // rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
 });

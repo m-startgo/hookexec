@@ -79,7 +79,6 @@ func main() {
 
 	// 设置Gin模式
 	gin.SetMode(gin.ReleaseMode)
-
 	global.Router = gin.Default()
 
 	global.SetApiRoutes()
