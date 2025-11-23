@@ -9,6 +9,7 @@ import (
 	"app.local/app/global"
 	"app.local/app/utils/flog"
 	"github.com/gin-gonic/gin"
+	"github.com/m-startgo/go-utils/mstr"
 )
 
 //go:embed all:frontend/dist
@@ -88,7 +89,7 @@ func main() {
 
 	// 启动服务器
 	port := "9900"
-	flog.App.Info("服务器启动 http://localhost:", port)
+	flog.App.Info("服务器启动", mstr.Join("http://localhost:", port))
 
 	err := global.Router.Run(":" + port)
 	if err != nil {
