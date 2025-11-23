@@ -86,7 +86,6 @@ export default {
   width: 60px;
   opacity: 0.9;
   will-change: opacity;
-  @include global.wails-drag;
 }
 
 .TitleShowBtn {
@@ -146,7 +145,6 @@ export default {
   margin-top: 5px;
   margin-bottom: 5px;
   .btn {
-    @include global.wails-no-drag;
     cursor: pointer;
   }
 }

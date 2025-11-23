@@ -7,7 +7,6 @@
 
 <script lang="ts">
 import { RouterView } from 'vue-router';
-import { mapState } from 'pinia';
 
 import TitleBar from '@src/components/TitleBar.vue';
 
